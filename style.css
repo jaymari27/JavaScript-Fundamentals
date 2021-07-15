@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color:#5c5c5c;
+}
+body {
+    
+    font-family:Century Gothic, sans-serif;
+    display:flex;
+    background:#f5e8b8;
+}

@@ -119,3 +119,25 @@ if ((dolphinsScore>koalasScore) && (dolphinsScore >= 100)) {
     Dolphins: ${dolphinsScore}
     Koalas: ${koalasScore}`);
 }
+
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++ CODING CHALLENGE 4 ++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);
+
+//test data 1
+let bill = 275;
+let tip = (bill>=50) && (bill<=300) ? bill*0.15 : bill*0.2;
+console.log(`The bill is ${bill}, which means the tip should be ${tip}.
+The total value is ${tip+bill}`);
+
+//test data 2
+bill = 40;
+tip = (bill>=50) && (bill<=300) ? bill*0.15 : bill*0.2;
+console.log(`The bill is ${bill}, which means the tip should be ${tip}.
+The total value is ${tip+bill}`);
+
+//test data 3
+bill = 430;
+tip = (bill>=50) && (bill<=300) ? bill*0.15 : bill*0.2;
+console.log(`The bill is ${bill}, which means the tip should be ${tip}.
+The total value is ${tip+bill}`);

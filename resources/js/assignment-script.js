@@ -52,3 +52,16 @@ const johnHeight2 = 1.76;
 
 //BMI CALCULATION
 const markBMI1 = markMass1 / markHeight1;
+const johnBMI1 = johnMass1 / johnHeight1;
+const markHigherBMI1 = markBMI1 > johnBMI1;
+console.log("Mark's BMI using test data 1:\n"+markBMI1);
+console.log("John's BMI using test data 1:\n"+johnBMI1);
+console.log("Does Mark have a higher BMI than John?\n"+markHigherBMI1);
+
+const markBMI2 = markMass2 / markHeight2;
+const johnBMI2 = johnMass2 / johnHeight2;
+const markHigherBMI2 = markBMI2 > johnBMI2;
+console.log("Mark's BMI using test data 2:\n" + markBMI2);
+console.log("John's BMI using test data 2:\n" + johnBMI2);
+console.log("Does Mark have a higher BMI than John?\n"+markHigherBMI2);
+

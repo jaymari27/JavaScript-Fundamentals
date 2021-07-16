@@ -64,4 +64,3 @@ const markHigherBMI2 = markBMI2 > johnBMI2;
 console.log("Mark's BMI using test data 2:\n" + markBMI2);
 console.log("John's BMI using test data 2:\n" + johnBMI2);
 console.log("Does Mark have a higher BMI than John?\n"+markHigherBMI2);
-

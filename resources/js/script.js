@@ -201,3 +201,35 @@ for(i=0;i<bills.length;i++){
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
 /* Section 3: CODING CHALLENGE 3 +++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
+
+const markInfo = {
+    fullname: `Mark Miller`,
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function() {
+        this.outputBMI = this.mass/this.height ** 2;
+        return this.outputBMI;
+    }
+};
+const johnInfo = {
+    fullname: `John Smith`,
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function() {
+        this.outputBMI = this.mass/this.height ** 2;
+        return this.outputBMI;
+    }
+};
+
+console.log(`${markInfo.fullname}'s BMI is ${markInfo.calcBMI()}`);
+console.log(`${johnInfo.fullname}'s BMI is ${johnInfo.calcBMI()}`);
+
+if (markInfo.outputBMI > johnInfo.outputBMI) {
+    console.log(`${markInfo.fullname}'s BMI is higher than ${johnInfo.fullname}.`);
+} else if (markInfo.outputBMI < johnInfo.outputBMI) {
+    console.log(`${johnInfo.fullname}'s BMI is higher than ${markInfo.fullname}.`);
+} else {
+    console.log(`The two boys have the same BMI.`);
+}

@@ -1,3 +1,6 @@
+'use strict';
+//will let us know about errors
+
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++ CODING CHALLENGE 1 ++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
@@ -141,3 +144,31 @@ bill = 430;
 tip = (bill>=50) && (bill<=300) ? bill*0.15 : bill*0.2;
 console.log(`The bill is ${bill}, which means the tip should be ${tip}.
 The total value is ${tip+bill}`);
+
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++ CODING CHALLENGE 5 ++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);
+
+const aveScore = (score1,score2,score3) => {
+    return (score1+score2+score3)/3;
+} 
+
+const dolphinsAverage = aveScore(44,23,71);
+const koalasAverage = aveScore(65,54,49);
+
+function checkWinner (aveScore1,aveScore2) {
+    if (aveScore1 >= (aveScore2*2)) {
+        return `Dolphins win (${aveScore1} - ${aveScore2})`;
+    }
+    else if (aveScore2 >= (aveScore1*2)) {
+        return `Koalas win (${aveScore1} - ${aveScore2})`;
+    }
+    else if (aveScore1 === aveScore2) {
+        return `It's a tie (${aveScore1} - ${aveScore2})`;
+    }
+    else {
+        return `There is no victor (${aveScore1} - ${aveScore2})`;
+    }
+}
+
+console.log(checkWinner(dolphinsAverage,koalasAverage));

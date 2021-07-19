@@ -44,10 +44,6 @@ header h1 {
 
 .blog-info-bar a:hover {
     color:rgb(87, 87, 87);
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
 }
 
 .blog-info-bar a:visited,

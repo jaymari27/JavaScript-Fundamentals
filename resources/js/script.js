@@ -2,7 +2,7 @@
 //will let us know about errors
 
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++ CODING CHALLENGE 1 ++++++++++*/
+/* Section 2: CODING CHALLENGE 1 +++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
 
 //TEST DATA 1
@@ -43,7 +43,7 @@ console.log(`Does Mark have a higher BMI than John?
 ${markHigherBMI2}`);
 
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++ CODING CHALLENGE 2 ++++++++++*/
+/* Section 2: CODING CHALLENGE 2 +++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
 
 if (markHigherBMI1 == true) {
@@ -57,7 +57,7 @@ if (markHigherBMI1 == true) {
 }
 
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++ CODING CHALLENGE 3 ++++++++++*/
+/* Section 2: CODING CHALLENGE 3 +++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
 
 // calculating average score
@@ -124,7 +124,7 @@ if ((dolphinsScore>koalasScore) && (dolphinsScore >= 100)) {
 }
 
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++ CODING CHALLENGE 4 ++++++++++*/
+/* Section 2: CODING CHALLENGE 4 +++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
 
 //test data 1
@@ -146,7 +146,7 @@ console.log(`The bill is ${bill}, which means the tip should be ${tip}.
 The total value is ${tip+bill}`);
 
 console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++ CODING CHALLENGE 5 ++++++++++*/
+/* Section 3: CODING CHALLENGE 1 +++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++*/`);
 
 const aveScore = (score1,score2,score3) => {
@@ -173,3 +173,31 @@ function checkWinner (aveScore1,aveScore2) {
 
 console.log(checkWinner(dolphinsAverage,koalasAverage));
 
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/* Section 3: CODING CHALLENGE 2 +++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);
+
+function calcTip(billAmount){
+    if ((billAmount>=50) && (billAmount<=300)) {
+        return billAmount*0.15;
+    } else {
+        return billAmount*0.2;
+    }
+}
+
+//test data
+const bills = [125,555,44];
+const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+let total;
+var i;
+
+for(i=0;i<bills.length;i++){
+    total = bills[i]+tips[i];
+    console.log(`Bill: ${bills[i]}
+    Tip: ${tips[i]}
+    Total Amount: ${total}`);
+}
+
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/* Section 3: CODING CHALLENGE 3 +++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);

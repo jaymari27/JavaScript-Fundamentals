@@ -172,3 +172,4 @@ function checkWinner (aveScore1,aveScore2) {
 }
 
 console.log(checkWinner(dolphinsAverage,koalasAverage));
+

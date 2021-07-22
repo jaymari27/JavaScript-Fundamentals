@@ -1,49 +1,52 @@
 
 <!DOCTYPE html>
-    <html>
-        <header>
-            <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-            <title>Javascript Fundamentals</title>
-            <h1> </h1>
-        </header>
-    <body>
-        <div class="row blog-info-bar">
-            <div class="col span-1-of-5">
-                <a href="#">Home</a>
+<html>
+    <header class="container-fluid img-responsive">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <title>Javascript Fundamentals</title>
+    </header>
+<body class="container-fluid">
+    <div id="calculator-container">
+        <div class=row">
+            <h4 class="text-primary text-center">BMI Calculator</h4>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <label class="form-control-label">Height</label>
             </div>
-            <div class="col span-1-of-5">
-                <a href="#">About</a>
-            </div>
-            <div class="col span-1-of-5">
-                <a href="#">Blog</a>
-            </div>
-            <div class="col span-1-of-5">
-                <a href="#">Archives</a>
-            </div>
-            <div class="col span-1-of-5">
-                <a href="#">Contact</a>
+            <div class="col-xs-7">
+                <input type="number" id="your-height" class="form-control" placeholder="Enter height in meters (m)">
             </div>
         </div>
-
-        <div class="row section-blog-contents">
-            
-        </div>
-
-        <div class="row section-contact">
-        </div>
-        <script src="resources/js/script.js"></script>
-
-        <footer>
-            <div class="row"></div>
-            <div class="row">
-                <p>
-                    Copyright &copy; 2021 by SHRINE.<br>
-                    All rights reserved.
-                </p>
+        <div class="row">
+            <div class="col-xs-5">
+                <label class="form-control-label">Weight</label>
             </div>
-        </footer>
-    </body>
+            <div class="col-xs-7">
+                <input type="number" id="your-weight" class="form-control" placeholder="Enter weight in kilograms (kg)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <label class="form-control-label">BMI</label>
+            </div>
+            <div class="col-xs-7">
+                <input type="number" id="your-BMI" class="form-control" placeholder="Your BMI" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <button onclick="clearVal();" class="btn btn-block btn-danger">Clear</button>
+            </div>
+            <div class="col-xs-6">
+                <button onclick="calcBMI();" class="btn btn-block btn-info">Calculate!</button>
+            </div>
+        </div>
+    </div>
+    <script src="resources/js/script.js"></script>
+</body>
 </html>

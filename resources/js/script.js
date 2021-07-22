@@ -186,15 +186,15 @@ function calcTip(billAmount){
 }
 
 //test data
-const bills = [125,555,44];
-const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+let bills = [125,555,44];
+tip = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
 let total;
 var i;
 
 for(i=0;i<bills.length;i++){
-    total = bills[i]+tips[i];
+    total = bills[i]+tip[i];
     console.log(`Bill: ${bills[i]}
-    Tip: ${tips[i]}
+    Tip: ${tip[i]}
     Total Amount: ${total}`);
 }
 
@@ -232,4 +232,70 @@ if (markInfo.outputBMI > johnInfo.outputBMI) {
     console.log(`${johnInfo.fullname}'s BMI is higher than ${markInfo.fullname}.`);
 } else {
     console.log(`The two boys have the same BMI.`);
+}
+
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/* Section 3: CODING CHALLENGE 4 +++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);
+
+//will use calcTip function
+//test data
+bills = [22,295,176,440,37,105,10,1100,86,52];
+const tips = [];
+const totals = [];
+
+var i;
+for(i=0;i<bills.length;i++){
+    const tip1 = calcTip(bills[i]);
+    tips.push(tip1);
+    totals.push(tip1+bills[i]);
+}
+
+const calcAverage = function (arr) {
+    let sum=0;
+    for (let x=0;x<arr.length;x++){
+        sum += arr[x];
+    }
+    return sum/arr.length;
+}
+
+console.log(calcAverage(bills));
+console.log(calcAverage(tips));
+console.log(calcAverage(totals));
+
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/* Section 5: CODING CHALLENGE 1 +++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);
+
+//test data
+const data1 = [17,21,23];
+const data2 = [12,3,-5,0,4];
+
+const printForecast = function (arr) {
+    let tmp = ``;
+    // initializing variable "tmp" because it will be undefined otherwise
+    for (let a=0; a<arr.length;a++) {
+        tmp += `${arr[a]} degrees in ${a+1} days...`;
+    }
+    console.log(`...`+tmp);
+}
+
+printForecast(data1); 
+printForecast(data2); 
+
+/*+++++++++++++++++++++++++++++++*/
+/*+++++ BMI CALCULATOR ++++++++++*/
+/*+++++++++++++++++++++++++++++++*/
+
+function calcBMI() {
+    const height = document.getElementById("your-height").value;
+    const weight = document.getElementById("your-weight").value;
+    const outputBMI = weight/height ** 2;
+    document.getElementById("your-BMI").value = outputBMI;
+}
+
+function clearVal(){
+    document.getElementById("your-height").value = ``;
+    document.getElementById("your-weight").value = ``;
+    document.getElementById("your-BMI").value = ``;
 }

@@ -299,3 +299,8 @@ function clearVal(){
     document.getElementById("your-weight").value = ``;
     document.getElementById("your-BMI").value = ``;
 }
+
+console.log(`/*++++++++++++++++++++++++++++++++++++++++*/
+/* Section 7: CODING CHALLENGE 1 +++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++*/`);
+

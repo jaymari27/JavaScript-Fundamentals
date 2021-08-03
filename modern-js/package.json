@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,10 @@
   "author": "Jaymari Timblique",
   "license": "ISC",
   "dependencies": {
-    "lodash-es": "^6.14.14"
+    "lodash-es": "^4.17.15"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
   },
   "bugs": {
     "url": "https://github.com/jaymari27/JavaScript-Fundamentals/issues"

@@ -55,8 +55,9 @@ shoppingCart2.addToCart('pizza', 1);
 
 ///////////////////////////////////////
 // Introduction to NPM
-import cloneDeep from '../node_modules/lodash-es/cloneDeep.js';
-//import cloneDeep from 'lodash-es';
+/// There's no need to specify the entire path. Parcel can search it for us.
+//import cloneDeep from '../node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -73,6 +74,17 @@ console.log(stateClone);
 
 console.log(stateDeepClone);
 
+// For Parcel: Whenever we reload the browser, this will trigger a rebuild and all changes will be injected to the browser without triggering a page reload
 if (module.hot) {
   module.hot.accept();
 }
+
+class Person {
+  greeting = 'Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.greeting}, ${this.name}`);
+  }
+}
+
+const jonas = new Person('Jonas');

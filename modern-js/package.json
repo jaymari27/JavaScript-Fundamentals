@@ -1,0 +1,22 @@
+{
+  "name": "javascript-fundamentals",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaymari27/JavaScript-Fundamentals.git"
+  },
+  "author": "Jaymari Timblique",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^6.14.14"
+  },
+  "bugs": {
+    "url": "https://github.com/jaymari27/JavaScript-Fundamentals/issues"
+  },
+  "homepage": "https://github.com/jaymari27/JavaScript-Fundamentals#readme",
+  "description": ""
+}

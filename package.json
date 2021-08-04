@@ -1,5 +1,5 @@
 {
-  "name": "javascript-fundamentals",
+  "name": "forkify-app",
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.16.0",
+    "fractional": "^1.0.0",
     "lodash-es": "^4.17.15",
     "regenerator-runtime": "^0.13.9"
   },
@@ -24,5 +25,10 @@
     "url": "https://github.com/jaymari27/JavaScript-Fundamentals/issues"
   },
   "homepage": "https://github.com/jaymari27/JavaScript-Fundamentals#readme",
-  "description": ""
+  "description": "An application where you can search for recipes!",
+  "keywords": [
+    "forkify",
+    "food",
+    "ingredients"
+  ]
 }

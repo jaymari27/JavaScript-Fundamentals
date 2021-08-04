@@ -1,4 +1,5 @@
 import View from './View';
+import previewView from './previewView';
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 
 class ResultsView extends View {
@@ -7,29 +8,12 @@ class ResultsView extends View {
   _message = '';
 
   _generateMarkup() {
-    return this._data.map(this._generateMarkupPreview).join('');
-  }
-
-  _generateMarkupPreview(result) {
-    console.log(result);
-    return `
-    <li class="preview">
-        <a class="preview__link preview__link--active" href="#${result.id}">
-        <figure class="preview__fig">
-            <img src="${result.image}" alt="${result.title}" crossorigin/>
-        </figure>
-        <div class="preview__data">
-            <h4 class="preview__title">${result.title}</h4>
-            <p class="preview__publisher">${result.publisher}</p>
-            <div class="preview__user-generated">
-                <svg>
-                    <use href="${icons}#icon-user"></use>
-                </svg>
-            </div>
-        </div>
-        </a>
-    </li>
-      `;
+    return (
+      this._data
+        // the DOM elements are converted to string since the render parameter is set to "false", which returns markup text
+        .map(result => previewView.render(result, false))
+        .join('')
+    );
   }
 }
 

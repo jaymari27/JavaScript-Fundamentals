@@ -3,7 +3,7 @@
 ///////////////////////////////////////
 // Exporting and Importing in ES6 Modules
 /// Importing module
-
+/*
 // Specify the global variable/function you want to reference from the other part module
 //import { addToCart, totalPrice, totalQuantity } from './shoppingCart.js';
 console.log('Importing module');
@@ -24,7 +24,7 @@ add('onions', 12);
 // The cart variable was updated
 console.log(cart);
 
-/*
+
 const shoppingCart2 = (function () {
   const cart = [];
   const shippingCost = 10;
@@ -57,6 +57,7 @@ shoppingCart2.addToCart('pizza', 1);
 // Introduction to NPM
 /// There's no need to specify the entire path. Parcel can search it for us.
 //import cloneDeep from '../node_modules/lodash-es/cloneDeep.js';
+/*
 import cloneDeep from 'lodash-es';
 
 const state = {
@@ -80,11 +81,23 @@ if (module.hot) {
 }
 
 class Person {
-  greeting = 'Hey';
+  #greeting = 'Hey';
   constructor(name) {
     this.name = name;
-    console.log(`${this.greeting}, ${this.name}`);
+    console.log(`${this.#greeting}, ${this.name}`);
   }
 }
-
 const jonas = new Person('Jonas');
+
+console.log('Jonas' ?? null);
+
+console.log(cart.find(el => el.quantity >= 2));
+Promise.resolve('TEST').then(x => console.log(x));
+
+import 'core-js/stable';
+// import 'core-js/stable/array/find';
+// import 'core-js/stable/promise';
+
+// Polifilling async functions
+import 'regenerator-runtime/runtime';
+*/

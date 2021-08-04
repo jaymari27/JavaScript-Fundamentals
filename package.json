@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel /modern-js/index.html",
+    "build": "parcel build /modern-js/index.html"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,9 @@
   "author": "Jaymari Timblique",
   "license": "ISC",
   "dependencies": {
-    "lodash-es": "^4.17.15"
+    "core-js": "^3.16.0",
+    "lodash-es": "^4.17.15",
+    "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
     "parcel": "^1.12.4"
